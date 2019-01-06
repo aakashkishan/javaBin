@@ -85,9 +85,31 @@ public class JavaStrings {
 
         //KINDA REGEX
         String email = "blahblah@test.com";
-        String phone = "9654398984";
-        String password = "Rainbow123";
 
+        //Email Validation
+        if(!email.isEmpty()) {
+            System.out.println("Email is available!");
+            if(!email.contains("@") && !email.contains(".")) {
+                System.out.println("But, Email is invalid");
+            } else {
+                System.out.println("Email is valid!");
+            }
+        } else {
+            System.out.println("Enter Email: ");
+        }
+
+        //Strings are Immutable
+        //Use the concat() function
+        String string = new String("Hello");
+        //Like using the '+' operator
+        string.concat(" World");
+        System.out.println("Concatenated String: " + string);
+
+        //But, String Buffers are not immutable
+        //Use the append function and the StringBuffer Class
+        StringBuffer strBuffer = new StringBuffer("Hello");
+        strBuffer.append(" World");
+        System.out.println("Concatenated Buffer: " + strBuffer);
 
     }
 
