@@ -32,6 +32,63 @@ public class JavaStrings {
             System.out.println("5 and 6 strings are not equal!1");
         }
 
+        /********* String Methods **********/
+        //String Length
+        String str = "Hey Mark, When should we meet?";
+        int len = str.length();
+        System.out.println("Length of String: " + len);
+
+        //Characters at an index
+        System.out.println("Character at Index 0: " + str.charAt(0) + str.charAt(len - 1));
+
+        //UpperCase the string
+        //toUpperCase() does not change the string forever, the String is immutable
+        System.out.println("Upper Case String: " + str.toUpperCase());
+
+        //Substring check
+        //Use the contains() function
+        System.out.println("Substring Check 'Mark': " + str.contains("Mark"));
+
+        //Create a substring
+        //Use the substring(startIndex, endIndex) function
+        String temp1 = str.substring(3);
+        String temp2 = str.substring(3, 20);
+        System.out.println("Created Substring: " + temp1 + " | " + temp2);
+
+        //Replace a character in the string
+        //Use the replace('currentCharacter', 'replaceCharacter') function
+        String temp3 = str.replace('M', 'L');
+        System.out.println("Replaced string: " + temp3);
+
+        //Replace a substring in the string
+        //Use the replace("currentSequence", "replaceSequence") function
+        String temp4 = str.replace("Mark", "Jack");
+        System.out.println("REplaced StringSequence: " + temp4);
+
+        //Convert Stirng into Character Array
+        //Use the toCharArray() function
+        char[] charArr = str.toCharArray();
+
+        //Syntax: Foreach loop
+        for(char ch : charArr) {
+            System.out.print(ch + " ");
+        }
+        System.out.println();
+
+        //Split the string
+        //Use the split(splittingCharacter) function
+        String[] strArr = str.split(" ");
+        System.out.print("Splitting Sequences: ");
+        for(String s : strArr) {
+            System.out.println(s.trim());
+        }
+
+        //KINDA REGEX
+        String email = "blahblah@test.com";
+        String phone = "9654398984";
+        String password = "Rainbow123";
+
+
     }
 
 }
