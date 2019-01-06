@@ -105,11 +105,24 @@ public class JavaStrings {
         string.concat(" World");
         System.out.println("Concatenated String: " + string);
 
-        //But, String Buffers are not immutable
+        //But, String Buffers are mutable
         //Use the append function and the StringBuffer Class
         StringBuffer strBuffer = new StringBuffer("Hello");
         strBuffer.append(" World");
         System.out.println("Concatenated Buffer: " + strBuffer);
+
+        //String Builders are the same as String Buffers, but they are not thread-safe
+        StringBuilder strBuilder = new StringBuilder("Hello");
+        strBuilder.append(" World Builders");
+        System.out.println("Concatenated Builders: " + strBuilder);
+
+        //Run-Time Polymorphism
+        CharSequence chSeq = null;
+        chSeq = new String("Hi");
+        chSeq = new StringBuffer("Hello");
+        chSeq = new StringBuilder("How are you?");
+
+
 
     }
 
