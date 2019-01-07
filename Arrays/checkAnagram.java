@@ -11,20 +11,37 @@ public class checkAnagram {
 
         //Initialize to Zero
         for(int i = 1; i <= 128; i++) {
-            intArr[i] = 0;
+            intArr1[i] = 0;
+            intArr2[i] = 0;
         }
 
-        char[] chArr = new char[str.length()];
-        chArr = str.toCharArray();
+        //Convert the Strings to character arrays
+        char[] chArr1 = new char[str1.length()];
+        char[] chArr2 = new char[str2.length()];
+        chArr1 = str1.toLowerCase().toCharArray();
+        chArr2 = str2.toLowerCase().toCharArray();
 
-        for(char ch : chArr) {
-            intArr[(int) ch] += 1;
+        //Log the various characters in the strings
+        for(char ch : chArr1) {
+            intArr1[(int) ch] += 1;
         }
 
+        for(char ch : chArr2) {
+            intArr2[(int) ch] += 1;
+        }
+
+        //Check if anagram
+        int flag = 0;
         for(int i = 1; i <= 128; i++) {
-            if(intArr[i] > 1) {
-                System.out.println((char) i + " : " + intArr[i]);
+            if(intArr1[i] == intArr2[i]) {
+                flag += 1;
             }
+        }
+
+        if(flag == 128) {
+            System.out.println("Yay! You've found anagrams");
+        } else {
+            System.out.println("Nah! No anagrams");
         }
 
     }
