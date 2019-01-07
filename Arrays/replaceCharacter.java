@@ -7,7 +7,7 @@ public class replaceCharacter {
         String str = "Hello! Good Morning! Have a good day!";
         String targetStr = " ";
         System.out.println("Original String: " + str);
-        System.out.println("Modified String: " + replaceChar(str, targetStr));
+        System.out.println("Modified String: " + replaceChar(str.trim(), targetStr));
 
     }
 
