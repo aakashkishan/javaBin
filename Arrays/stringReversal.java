@@ -10,18 +10,29 @@ public class stringReversal {
         chArr = str.toCharArray();
 
         System.out.println("Original String: " + str);
-        System.out.println("Reverse String: " + computeReverse(chArr, len - 1));
+        System.out.println("Recursive Reverse String: " + recursiveReverse(chArr, len - 1));
+        System.out.println("Normal Reverse String: " + computeReverse(chArr, len - 1));
 
     }
 
     // Recursive function to find the reverse of a String
-    public static String computeReverse(char[] chArr, int length) {
+    public static String recursiveReverse(char[] chArr, int length) {
         String result = "";
         int i = length;
         if(length == 0) {
             return Character.toString(chArr[i]);
         }
-        result = Character.toString(chArr[i]).concat(computeReverse(chArr, length - 1));
+        result = Character.toString(chArr[i]).concat(recursiveReverse(chArr, length - 1));
+        return result;
+    }
+
+    // Compute function to find the reverse of a String
+    public static String computeReverse(char[] chArr, int length) {
+
+        String result = "";
+        for(int i = length; i >=0; i--) {
+            result += Character.toString(chArr[i]);
+        }
         return result;
     }
 
