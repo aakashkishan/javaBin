@@ -43,6 +43,11 @@ public class arrayListIntroduction {
         studentList.set(2, "Vishnu");
         System.out.println("After Replacement: " + studentList);
 
+
+        ArrayList backupList = new ArrayList();
+        backupList = (ArrayList) studentList.clone();
+        System.out.println("Cloned ArrayList: " + backupList);
+
     }
 
     public static void printMessage(String x) {
