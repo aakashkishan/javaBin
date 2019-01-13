@@ -52,7 +52,7 @@ public class arrayListIntroduction {
 
         // ArrayList subList() function
         // subList() syntax - subList(int fromIndex, int toIndex)
-        List <String> subList = studentList.subList(1, 3);
+        List<String> subList = studentList.subList(1, 3);
         System.out.println("Sub List of ArrayList: " + subList);
 
 
@@ -60,6 +60,15 @@ public class arrayListIntroduction {
         // Converts the ArrayList to Array
         Object[] subArray = subList.toArray();
         System.out.println("Array elements of subArray: " + Arrays.toString(subArray));
+
+
+        // ArrayList removeAll() function
+        // Removes elements of ArrayList2 from ArrayList1
+        ArrayList<String> removeList = new ArrayList<String>();
+        removeList.add("Ram");
+        removeList.add("Vishnu");
+        studentList.removeAll(removeList);
+        System.out.println("ArrayList after removal: " + studentList);
 
     }
 
