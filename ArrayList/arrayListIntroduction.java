@@ -44,9 +44,22 @@ public class arrayListIntroduction {
         System.out.println("After Replacement: " + studentList);
 
 
+        // ArrayList clone() function
         ArrayList backupList = new ArrayList();
         backupList = (ArrayList) studentList.clone();
         System.out.println("Cloned ArrayList: " + backupList);
+
+
+        // ArrayList subList() function
+        // subList() syntax - subList(int fromIndex, int toIndex)
+        List <String> subList = studentList.subList(1, 3);
+        System.out.println("Sub List of ArrayList: " + subList);
+
+
+        // ArrayList toArray() function
+        // Converts the ArrayList to Array
+        Object[] subArray = subList.toArray();
+        System.out.println("Array elements of subArray: " + Arrays.toString(subArray));
 
     }
 
