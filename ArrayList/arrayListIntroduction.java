@@ -35,6 +35,14 @@ public class arrayListIntroduction {
         // ArrayList forEach() function
         studentList.forEach((x) -> printMessage(x));
 
+
+        // ArrayList set() function
+        // set() syntax - set(int index, element E)
+        // Replace an element in the ArrayList
+        System.out.println("Before Replacement: " + studentList);
+        studentList.set(2, "Vishnu");
+        System.out.println("After Replacement: " + studentList);
+
     }
 
     public static void printMessage(String x) {
