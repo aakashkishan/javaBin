@@ -62,6 +62,11 @@ public class arrayListIntroduction {
         System.out.println("Array elements of subArray: " + Arrays.toString(subArray));
 
 
+        // ArrayList size() function
+        // Gets the number of elements in an ArrayList
+        System.out.println("Number of Students: " + studentList.size());
+
+
         // ArrayList removeAll() function
         // Removes elements of ArrayList2 from ArrayList1
         ArrayList<String> removeList = new ArrayList<String>();
@@ -69,6 +74,12 @@ public class arrayListIntroduction {
         removeList.add("Vishnu");
         studentList.removeAll(removeList);
         System.out.println("ArrayList after removal: " + studentList);
+
+
+        // ArrayList get() function
+        // get() syntax - get(int index)
+        // Get a particular index value of an ArrayList
+        System.out.println("Second Student: " + studentList.get(1));
 
     }
 
