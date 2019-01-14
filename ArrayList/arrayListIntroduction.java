@@ -81,6 +81,24 @@ public class arrayListIntroduction {
         // Get a particular index value of an ArrayList
         System.out.println("Second Student: " + studentList.get(1));
 
+
+        // ArrayList ensureCapacity() function
+        // ensureCapacity() syntax - ensureCapacity(int minCapacity)
+        // Increases capacity based on the minimum capacity specified
+        studentList.ensureCapacity(3);
+        studentList.add("Vishnu");
+        System.out.println("Updated StudentList: " + studentList);
+
+
+        // ArrayList iterator() function
+        // Create an Iterator for the ArrayList
+        Iterator<String> iter = studentList.iterator();
+        System.out.println("The Elements of the Iterator: ");
+        // Iterator functions hasNext() and next()
+        while(iter.hasNext()) {
+            System.out.print(iter.next() + " ");
+        }
+
     }
 
     public static void printMessage(String x) {
