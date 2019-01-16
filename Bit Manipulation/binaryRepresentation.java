@@ -8,16 +8,16 @@ public class binaryRepresentation {
 
     public static void main(String args[]) {
 
-        int input = 43;
+        // int input = 15;
         System.out.println("The binary representation is : ");
-        getBinary(input);
+        getBinaryRecursive(12);
 
     }
 
-    public static void getBinary(int input) {
+    public static void getBinaryRecursive(int input) {
 
         if(input > 1) {
-            getBinary(input >>= 1);
+            getBinaryRecursive(input >> 1);
         }
         System.out.print(input % 2);
 
