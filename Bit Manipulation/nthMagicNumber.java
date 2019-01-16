@@ -1,7 +1,7 @@
 /* Objective - given a number n, generate the nth magic number
    NOTE : A Magic Number is a power of 5 or sum of unique powers of 5 
-   STRATEGY : The magic number is a perfect power of 5 when n is a power of 2 
-   example : 5, 25, 30, 125, 130, 150, 155, ...  */
+   Strategy : The magic number is a perfect power of 5 when n is a power of 2 
+   Example : 5, 25, 30, 125, 130, 150, 155, ...  */
 
 import java.lang.*;
 import java.io.*;
