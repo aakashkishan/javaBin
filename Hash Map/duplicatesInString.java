@@ -39,10 +39,40 @@ public class duplicatesInString {
 
     }
 
+    public static void findDuplicateChars(String str) {
+
+        HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
+
+        for(int i = 0; i < str.length(); i++) {
+            if(str.charAt(i) == ' ') {
+                continue;
+            } 
+            else if(hm.get(str.charAt(i)) != null) {
+                hm.put(str.charAt(i), hm.get(str.charAt(i)) + 1);
+            } 
+            else {
+                hm.put(str.charAt(i), 1);
+            }
+        }
+
+        Iterator<Character> chr = hm.keySet().iterator();
+        while(chr.hasNext()) {
+            Character ch = chr.next();
+            if(hm.get(ch) > 1) {
+                System.out.println(ch + " is duplicated " + hm.get(ch) + " times");
+            }
+        }
+
+    }
+
     public static void main(String args[]) {
 
         String str1 = "I am am a monkey monkey";
+        String str2 = "javaj2ee";
+        System.out.println("Duplicate Words:");
         findDuplicateWords(str1);
+        System.out.println("Duplicate Chars:");
+        findDuplicateChars(str2);
 
     }
 
