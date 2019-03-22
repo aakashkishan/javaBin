@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Iterator;
 
 public class duplicatesInString {
 
@@ -23,14 +24,24 @@ public class duplicatesInString {
 
         }
 
-        System.out.println(hm);
+        // Print only the duplicate words
+        // The below statement creator an iterator of type string 
+        // for all the keyset in the HashMap
+        Iterator<String> string = hm.keySet().iterator();
+        while(string.hasNext()) {
+            String temp = string.next();
+            if(hm.get(temp) > 1) {
+                System.out.println(temp + " is duplicated " + hm.get(temp) + " times");
+            }
+        }
+
 
 
     }
 
     public static void main(String args[]) {
 
-        String str1 = "I am am a I monkey";
+        String str1 = "I am am a monkey monkey";
         findDuplicateWords(str1);
 
     }
