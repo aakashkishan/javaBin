@@ -47,7 +47,7 @@ public class ThreeSum {
 
         List<List<Integer>> results = new ArrayList<>();
 
-        if(arr == null || arr.length == 0) {
+        if(arr == null || arr.length < 3) {
             return results;
         }
 
