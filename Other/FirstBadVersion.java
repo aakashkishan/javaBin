@@ -50,23 +50,3 @@ public class FirstBadVersion {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
