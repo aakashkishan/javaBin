@@ -9,7 +9,6 @@ class TreeNode {
     }
 }
 
-
 public class MinimumDepth {
 
     public static int findMinDepth(TreeNode root) {
