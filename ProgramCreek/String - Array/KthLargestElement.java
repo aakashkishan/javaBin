@@ -5,7 +5,7 @@ public class KthLargestElement {
     public static int findKthLargest(int[] nums, int k) {
 
         int kth_largest = 0;
-        iF(nums == null || nums.length == 0) {
+        if(nums == null || nums.length == 0) {
             return kth_largest;
         }
 
