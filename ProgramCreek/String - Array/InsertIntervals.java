@@ -25,7 +25,8 @@ public class InsertIntervals {
                 new_itl = interval;
             } 
             else if(interval.end >= new_itl.start || interval.start <= new_itl.end) {
-                new_itl = new Interval(Math.min(interval.start, new_itl.start), Math.max(interval.end, new_itl.end));
+                new_itl = new Interval(Math.min(interval.start, new_itl.start), 
+                                        Math.max(interval.end, new_itl.end));
             }
         }
         result_al.add(new_itl);
