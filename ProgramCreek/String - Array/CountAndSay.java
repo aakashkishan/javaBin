@@ -11,7 +11,6 @@ public class CountAndSay {
 
         String result_str = "1";
         int ctr = 0;
-        // int start = 0;
         while(ctr < n) {
             StringBuilder sb = new StringBuilder();
             int start = 0;
