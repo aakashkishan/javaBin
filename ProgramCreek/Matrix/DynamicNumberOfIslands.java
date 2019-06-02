@@ -57,8 +57,8 @@ public class DynamicNumberOfIslands {
 
     public static void main(String args[]) {
 
-        int[][] lands = new int[][] {{1, 1}, {0, 1}, {3, 3}, {3, 4}};
-        int m = 6;
+        int[][] lands = new int[][] {{1, 1}, {0, 1}, {3, 3}, {3, 4}, {3, 1}, {2, 1}, {3, 2}};
+        int m = 5;
         int n = 5;
         int[] island_result = getNumberOfIslands(lands, m, n);
         System.out.println("The Number of Islands at every stage: ");
