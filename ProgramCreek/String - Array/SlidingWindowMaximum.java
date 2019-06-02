@@ -2,6 +2,37 @@ import java.util.*;
 
 public class SlidingWindowMaximum {
 
+    public static int[] altMaxSlidingWindow(int[] nums, int k) {
+        
+        if(nums == null || nums.length == 0) {
+            return new int[0];
+        }
+        
+        int[] result = new int[nums.length - k + 1];
+        LinkedList<Integer> deque = new LinkedList<Integer>();
+        for(int i = 0; i < nums.length; i++) {
+            
+            // Poll after the sliding window moves the particular index
+            if(!deque.isEmpty() && deque.peekFirst() == i - k) {
+                deque.poll();
+            }
+            
+            // Remove the last element until the max element is at the peek position
+            while(!deque.isEmpty() && nums[deque.peekLast()] < nums[i]) {
+                deque.removeLast();
+            } 
+            
+            deque.offer(i);
+            // Query the Maximum Element for every sliding window move
+            if(i + 1 >= k) {
+                result[i + 1 - k] = nums[deque.peek()];
+            }
+            
+        }
+        return result;
+        
+    }
+
     public static int[] maxSlidingWindow(int[] nums, int k) {
         
         if(nums == null || nums.length == 0) {
@@ -39,6 +70,13 @@ public class SlidingWindowMaximum {
         int k = 3;
         int[] max_sliding_window = maxSlidingWindow(nums, k);
         System.out.println("The Maxmimum Values in the Sliding Window: ");
+        for(int i: max_sliding_window) {
+            System.out.print(i + " ");
+        }
+
+        System.out.println();
+        max_sliding_window = altMaxSlidingWindow(nums, k);
+        System.out.println("Alternate Method: The Maxmimum Values in the Sliding Window: ");
         for(int i: max_sliding_window) {
             System.out.print(i + " ");
         }
